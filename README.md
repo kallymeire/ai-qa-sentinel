@@ -1,32 +1,28 @@
 # 🛡️ AI-QA Sentinel
 
-**AI-QA Sentinel** é uma plataforma de automação de testes de garantia de qualidade (QA) baseada em Agentes de Inteligência Artificial. O projeto visa a geração, execução e análise autônoma de testes de API usando uma arquitetura moderna em Python.
+> Agente autónomo de testes e garantia de qualidade (QA) utilizando **LangGraph**, **FastAPI** e **SQLite**, com **100% de cobertura de código**.
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+## 📌 Sobre o Projeto
+
+O **AI-QA Sentinel** é um pipeline inteligente de automação de testes QA concebido para carregar conjuntos de dados de teste, executar verificações autónomas e registar métricas de execução e histórico com persistência de dados.
+
+A solução foi desenvolvida seguindo boas práticas de arquitetura de software, padrão RESTful API e testes unitários/de integração exaustivos.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
 
 - **Linguagem:** Python 3.10+
-- **Backend API:** FastAPI & Uvicorn
-- **Agentes de IA:** LangGraph
-- **Framework de Testes:** Pytest & Requests / HTTPX
-- **Dashboard:** Streamlit & Plotly
-- **Ambiente Virtual:** venv
+- **Orquestração de Agentes:** LangGraph
+- **Framework API:** FastAPI & Uvicorn
+- **Base de Dados:** SQLite
+- **Testes & Cobertura:** Pytest & Pytest-Cov (100% Total Coverage)
+- **Documentação:** OpenAPI / Swagger UI
 
 ---
 
-## 📁 Estrutura do Projeto
+## ⚙️ Arquitetura do Agente
 
-```text
-ai-qa-sentinel/
-├── data/
-│   └── dataset_qa.json       # Dataset de treino/exemplos de testes QA
-├── src/
-│   ├── agents/
-│   │   └── qa_agent.py       # Lógica principal do agente de QA
-│   ├── backend/
-│   │   └── main.py           # API REST em FastAPI para testes de contrato
-│   └── dashboard/            # Painel visual em Streamlit
-├── tests/                    # Suíte de testes automatizados
-├── requirements.txt          # Dependências do projeto
-└── README.md                 # Documentação do repositório
+O agente foi modelado como um grafo de estado através do **LangGraph**:
